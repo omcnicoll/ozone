@@ -1,12 +1,13 @@
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 import { createMuiTheme } from '@material-ui/core/styles';
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import NavBar from './components/NavBar';
-import NavBarPropBased from './components/NavBarPropBased';
+import HeaderBar from './components/HeaderBar';
 
 const theme = createMuiTheme({
+  typography: {
+    useNextVariants: true
+  },
   palette: {
     primary: {
       light: '#7d7d7d',
@@ -19,6 +20,9 @@ const theme = createMuiTheme({
       main: '#ea6401',
       dark: '#b04300',
       contrastText: '#000000'
+    },
+    text: {
+      orange: '#eb6502'
     }
   }
 });
@@ -29,7 +33,7 @@ class App extends Component {
       <div className="App">
         <MuiThemeProvider theme={theme}>
           <div>
-            <NavBarPropBased />
+            <HeaderBar />
           </div>
           <header className="App-header">
             <h1>ozone</h1>
