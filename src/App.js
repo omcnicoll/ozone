@@ -32,12 +32,12 @@ class App extends Component {
     return (
       <div className="App">
         <MuiThemeProvider theme={theme}>
-          <div>
+          <div className="Sticky">
             <HeaderBar />
           </div>
           <header className="App-header">
-            <h1>ozone</h1>
-            <p>Snippets and bikes, solve your problems here.</p>
+            <p>I do cool things, sometimes I write them down.</p>
+            <p>Here's where I do that.</p>
             <a
               className="App-link"
               href="https://reactjs.org"

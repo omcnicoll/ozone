@@ -27,12 +27,36 @@
   padding-bottom: 10px;
 }
 
-.Menu-offset {
-  margin-left: -58px;
-}
-
 .Floater {
   float: left;
-  padding-left: 24px;
-  padding-top: 10px;
+  padding-top: 2px;
+}
+
+.Sticky {
+  position: sticky;
+  top: 0;
+}
+
+.Header-img-div {
+  position: fixed;
+  left: 50%;
+}
+
+.Header-logo-offset {
+  margin-left: -92px;
+  position: absolute;
+}
+
+.Header-first-name {
+  position: relative;
+  left: -125px;
+  top: 5px;
+  margin-top: 0px;
+}
+
+.Header-last-name {
+  position: relative;
+  left: 21px;
+  bottom: 11px;
+  margin-bottom: 0px;
 }

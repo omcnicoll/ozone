@@ -42,8 +42,8 @@ class NavBarPropBased extends React.Component {
     return (
       <div className={classes.root}>
         <AppBar position="static">
-          <div class="Center-content">
-            <Toolbar class="Floater">
+          <div className="Center-content">
+            <Toolbar className="Floater">
               <IconButton
                 className={classes.menuButton}
                 color="secondary"
@@ -54,12 +54,16 @@ class NavBarPropBased extends React.Component {
                 <MenuIcon />
               </IconButton>
             </Toolbar>
-            <img
-              src={require('../assets/ozone-wide.ico')}
-              alt="ozone"
-              height="65px"
-              class="Menu-offset"
-            />
+            <div className="Header-img-div">
+              <img
+                src={require('../assets/ozone.svg')}
+                alt="ozone"
+                height="65px"
+                className="Header-logo-offset"
+              />
+              <h3 className="Header-first-name">Olivier</h3>
+              <h3 className="Header-last-name">McNicoll</h3>
+            </div>
           </div>
         </AppBar>
         <NavigationDrawer

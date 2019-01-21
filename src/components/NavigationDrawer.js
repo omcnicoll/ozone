@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
@@ -20,13 +20,15 @@ const styles = theme => ({
   selected: {
     color: 'green',
     background: 'red'
+  },
+  font: {
+    orange: theme.palette.text.orange
   }
 });
 
 class NavigationDrawer extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { open: false };
     this.handleClose = this.handleClose.bind(this);
   }
 
@@ -65,8 +67,11 @@ class NavigationDrawer extends React.Component {
                     </ListItemIcon>
                     <ListItemText
                       primary={
-                        <Typography variant="h6" style={{ color: '#ff6f00' }}>
-                          Lab
+                        <Typography
+                          variant="h7"
+                          style={{ color: classes.font.orange }}
+                        >
+                          {text}
                         </Typography>
                       }
                     />
