@@ -20,6 +20,7 @@ const styles = {
 
 function NavBar(props) {
   const { classes } = props;
+  this.drawerState = { open: false };
   return (
     <div className={classes.root}>
       <AppBar position="static">
@@ -47,7 +48,8 @@ function NavBar(props) {
 }
 
 NavBar.propTypes = {
-  classes: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired,
+  drawerState: PropTypes.bool.isRequired
 };
 
 export default withStyles(styles)(NavBar);

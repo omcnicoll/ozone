@@ -20,18 +20,21 @@ const styles = {
   }
 };
 
-class TemporaryDrawer extends React.Component {
-  state = {
-    top: false,
-    left: false,
-    bottom: false,
-    right: false
+class DrawerPropBased extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { open: false };
+    this.handleClose = this.handleClose.bind(this);
+  }
+
+  handleToggle = () => {
+    this.setState({
+      open: !this.state.open
+    });
   };
 
-  toggleDrawer = (side, open) => () => {
-    this.setState({
-      [side]: open
-    });
+  handleClose = () => {
+    this.props.handleClose();
   };
 
   render() {
@@ -76,17 +79,15 @@ class TemporaryDrawer extends React.Component {
 
     return (
       <div>
-        <Button onClick={this.toggleDrawer('left', true)}>Open Left</Button>
         <Drawer
           open={this.props.open}
-          docked={true}
-          onClose={this.toggleDrawer('left', false)}
+          onRequestChange={open => this.setState({ open })}
         >
           <div
             tabIndex={0}
             role="button"
-            onClick={this.toggleDrawer('left', false)}
-            onKeyDown={this.toggleDrawer('left', false)}
+            onClick={this.handleClose}
+            onKeyDown={this.handleClose}
           >
             {sideList}
           </div>
@@ -96,8 +97,8 @@ class TemporaryDrawer extends React.Component {
   }
 }
 
-TemporaryDrawer.propTypes = {
+DrawerPropBased.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(TemporaryDrawer);
+export default withStyles(styles)(DrawerPropBased);

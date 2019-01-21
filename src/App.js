@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar';
+import NavBarPropBased from './components/NavBarPropBased';
 
 const theme = createMuiTheme({
   palette: {
@@ -28,7 +29,7 @@ class App extends Component {
       <div className="App">
         <MuiThemeProvider theme={theme}>
           <div>
-            <NavBar />
+            <NavBarPropBased />
           </div>
           <header className="App-header">
             <h1>ozone</h1>
