@@ -1,8 +1,10 @@
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 import { createMuiTheme } from '@material-ui/core/styles';
 import React, { Component } from 'react';
+import Grid from '@material-ui/core/Grid';
 import './App.css';
 import HeaderBar from './components/HeaderBar';
+import ContentContainer from './components/ContentContainer';
 
 const theme = createMuiTheme({
   typography: {
@@ -11,13 +13,13 @@ const theme = createMuiTheme({
   palette: {
     primary: {
       light: '#7d7d7d',
-      main: '#515151',
+      main: '#a36416',
       dark: '#292929',
       contrastText: 'ffffff'
     },
     secondary: {
       light: '#ff953e',
-      main: '#ea6401',
+      main: '#333333',
       dark: '#b04300',
       contrastText: '#000000'
     },
@@ -35,18 +37,7 @@ class App extends Component {
           <div className="Sticky">
             <HeaderBar />
           </div>
-          <header className="App-header">
-            <p>I do cool things, sometimes I write them down.</p>
-            <p>Here's where I do that.</p>
-            <a
-              className="App-link"
-              href="https://reactjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React
-            </a>
-          </header>
+          <ContentContainer />
         </MuiThemeProvider>
       </div>
     );
