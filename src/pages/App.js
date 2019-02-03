@@ -2,9 +2,9 @@ import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 import { createMuiTheme } from '@material-ui/core/styles';
 import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
-import './App.css';
-import HeaderBar from './components/HeaderBar';
-import ContentContainer from './components/ContentContainer';
+import '../assets/styles/App.css';
+import HeaderBar from '../components/HeaderBar';
+import ContentContainer from '../components/ContentContainer';
 
 const theme = createMuiTheme({
   typography: {
